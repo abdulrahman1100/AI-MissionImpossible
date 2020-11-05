@@ -1,0 +1,15 @@
+
+public class IMF_member {
+	
+	int health;
+	boolean rescued;
+	Point point;
+	
+	public IMF_member() {
+		
+	}
+
+	public static void main (String[]args) {
+		
+	}
+}

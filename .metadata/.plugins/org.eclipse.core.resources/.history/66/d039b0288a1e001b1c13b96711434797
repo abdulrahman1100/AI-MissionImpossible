@@ -1,0 +1,25 @@
+
+public class MissionImpossible extends Procedure {
+	
+	int m,n,k,c;
+	Point pointE;
+	Point PointS;
+	
+
+	public MissionImpossible() {
+		
+	}
+	static String genGrid() {
+		
+		
+		return null;
+		
+		
+	}
+	static void solve() {
+		
+	}
+	public static void main (String []args) {
+		
+	}
+}

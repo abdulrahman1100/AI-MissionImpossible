@@ -1,0 +1,50 @@
+
+import java.util.Random;
+
+public class MissionImpossible extends Procedure {
+
+	static int m, n, k, c;
+	static Point pointEthan;
+	static Point pointSubmarine;
+	static IMF_member IMF_members[];
+
+	public MissionImpossible() {
+//		genGrid();
+	}
+
+	static String genGrid() {
+		// gen m randomly
+//x->n y->m
+		m = (int) (Math.random() * (15 - 5 + 1) + 5);
+		n = (int) (Math.random() * (15 - 5 + 1) + 5);
+		int ex = (int) (Math.random() * (n - 0 + 1) + 0);
+		int ey = (int) (Math.random() * (m - 0 + 1) + 0);
+		int sx = (int) (Math.random() * (n - 0 + 1) + 0);
+		int sy = (int) (Math.random() * (m - 0 + 1) + 0);
+		k = (int) (Math.random() * (10 - 5 + 1) + 5);
+		c = (int) (Math.random() * (k - 1 + 1) + 1);
+
+		pointEthan = new Point(ex, ey);
+		pointSubmarine = new Point(sx, sy);
+		IMF_members = new IMF_member[k];
+
+		//gen members points 
+		for (int i = 0; i < k; i++) {
+			int x = (int) (Math.random() * (n - 0 + 1) + 0);
+			int y = (int) (Math.random() * (m - 0 + 1) + 0);
+			
+			IMF_members[i]=new IMF_member();
+		}
+
+		return null;
+
+	}
+
+	static void solve() {
+
+	}
+
+	public static void main(String[] args) {
+		MissionImpossible m = new MissionImpossible();
+	}
+}

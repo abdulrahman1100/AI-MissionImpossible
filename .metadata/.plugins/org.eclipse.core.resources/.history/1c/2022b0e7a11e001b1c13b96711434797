@@ -1,0 +1,137 @@
+
+import java.util.Arrays;
+import java.util.Random;
+
+public class MissionImpossible extends Procedure {
+
+	static int m, n, k, c;
+	static Point pointEthan;
+	static Point pointSubmarine;
+	static IMF_member IMF_members[];
+	 IMF_member Grid[][];
+
+	public MissionImpossible() {
+		genGrid();
+		printGrid();
+	}
+
+	static String genGrid() {
+		Object Grid[][]=new Object[m][n];
+		// gen m randomly
+//x->n y->m
+		m = (int) (Math.random() * (15 - 5 + 1) + 5);
+		n = (int) (Math.random() * (15 - 5 + 1) + 5);
+		
+		int ex = (int) (Math.random() * (n - 0 + 1) + 0);
+		int ey = (int) (Math.random() * (m - 0 + 1) + 0);
+		pointEthan = new Point(ex, ey);
+		
+		
+		
+		int sx = (int) (Math.random() * (n - 0 + 1) + 0);
+		int sy = (int) (Math.random() * (m - 0 + 1) + 0);
+		
+		
+		while(sx==ex&&sy==ey) {
+			sx = (int) (Math.random() * (n - 0 + 1) + 0);
+			sy = (int) (Math.random() * (m - 0 + 1) + 0);
+			
+
+		}
+		pointSubmarine = new Point(sx, sy);
+		
+		k = (int) (Math.random() * (10 - 5 + 1) + 5);
+		c = (int) (Math.random() * (k - 1 + 1) + 1);
+
+		
+
+		// gen members points & ethan
+		
+		IMF_member Ethan = new IMF_member(100,pointEthan);
+		IMF_member Submarine = new IMF_member(pointSubmarine);
+		// the loop to gen points for imfMembers and check if duplicated before inserting into the arr 
+		IMF_members=new IMF_member[k];
+		if(Ethan.point!=null)
+		System.out.println("Ethan : "+ Ethan.point.print());
+//		for (int i = 0; i < IMF_members.length; i++) {
+//			IMF_members[i]=new IMF_member();
+//		}
+		
+		
+	
+//		for (int i = 0; i < IMF_members.length; i++) {
+//			IMF_members[i].point.print();
+//		}
+		
+		
+		for (int i = 0; i < k; i++) {
+
+			int x = (int) (Math.random() * (n-1 - 0 + 1) + 0);
+			int y = (int) (Math.random() * (m-1 - 0 + 1) + 0);
+			Point p = new Point(x, y);
+			int health = (int) (Math.random() * (99 - 1 + 1) + 1);
+			for (int j = 0; j < IMF_members.length; j++) {
+				if(IMF_members[j]!=null&&IMF_members[j].point!=null) {
+					
+					if (IMF_members[j].point.check_equality(p) || IMF_members[j].point.check_equality(Ethan.point)
+							||pointSubmarine.check_equality(p)) {
+						
+						x = (int) (Math.random() * (n-1 - 0 + 1) + 0);
+						y = (int) (Math.random() * (m-1 - 0 + 1) + 0);
+						p = new Point(x, y);
+						
+						j = 0;
+					}
+				}
+				
+
+			}
+				
+				IMF_members[i] = new IMF_member(health,false,p);
+				Grid[y][x]=IMF_members[i];
+
+				
+}
+		
+			
+			
+		
+		if(Ethan!=null&&Ethan.point!=null) {
+			Grid[Ethan.point.y][Ethan.point.x]=Ethan;
+		}
+		
+		if(Submarine!=null&&Submarine.point!=null) {
+			Grid[Submarine.point.y][Submarine.point.x]=Submarine;
+		}
+		
+		for (int i = 0; i < Grid.length; i++) {
+			for (int j = 0; j < Grid[i].length; j++) {
+				
+				if(Grid[i][j]!=null) {
+					System.out.println("gg");
+					IMF_member m=(IMF_member) Grid[i][j];
+					System.out.println(m.point.print());
+				}
+			}
+		}
+		
+		
+
+
+		return null;
+
+	}
+	void printGrid() {
+		
+
+		
+	}
+
+	static void solve() {
+
+	}
+
+	public static void main(String[] args) {
+		MissionImpossible m = new MissionImpossible();
+	}
+}

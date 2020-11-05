@@ -1,0 +1,31 @@
+
+import java.util.Random;
+public class MissionImpossible extends Procedure {
+	
+	int m,n,k,c;
+	Point pointE;
+	Point PointS;
+	
+
+	public MissionImpossible() {
+		genGrid();
+	}
+	
+	static String genGrid() {
+		//gen m randomly 
+		int min=5;
+		int max=15;
+		int random_int = (int)(Math.random() * (max - min + 1) + min);
+		System.out.println(random_int);
+		
+		return null;
+		
+		
+	}
+	static void solve() {
+		
+	}
+	public static void main (String []args) {
+		
+	}
+}

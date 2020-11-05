@@ -1,0 +1,14 @@
+
+public class IMF_member {
+	
+	boolean rescued;
+	Point point;
+	
+	public IMF_member() {
+		
+	}
+
+	public static void main (String[]args) {
+		
+	}
+}
