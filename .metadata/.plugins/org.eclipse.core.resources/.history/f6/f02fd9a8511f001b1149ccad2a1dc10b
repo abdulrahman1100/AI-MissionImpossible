@@ -1,0 +1,14 @@
+import java.util.TreeSet;
+
+abstract public class generic_search {
+	
+	TreeSet<String> state_space;
+	node initialState;
+	String setOfOperators;
+
+	abstract void BFS(node initialNode);
+//	abstract void pathCost();
+//	abstract void goalTest();
+	
+
+}

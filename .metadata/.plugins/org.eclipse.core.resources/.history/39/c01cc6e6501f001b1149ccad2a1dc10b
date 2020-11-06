@@ -1,0 +1,7 @@
+
+abstract public class generic_search {
+	
+
+	abstract void BFS(node initialNode);
+
+}

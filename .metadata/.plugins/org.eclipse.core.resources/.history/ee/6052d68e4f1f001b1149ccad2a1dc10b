@@ -1,0 +1,12 @@
+
+public class node {
+	
+	IMF_member x;
+	int depth;
+	int cost;
+	boolean goal;
+	String transition;
+	
+	
+
+}

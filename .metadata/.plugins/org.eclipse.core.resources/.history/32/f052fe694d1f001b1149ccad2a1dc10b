@@ -1,0 +1,9 @@
+
+public class node {
+	
+	int depth;
+	int cost;
+	boolean goal;
+	
+
+}

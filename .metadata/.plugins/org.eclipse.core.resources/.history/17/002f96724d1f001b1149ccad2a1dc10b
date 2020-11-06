@@ -1,0 +1,12 @@
+
+public class node {
+	
+	Object x;
+	int depth;
+	int cost;
+	boolean goal;
+	String transition;
+	
+	
+
+}

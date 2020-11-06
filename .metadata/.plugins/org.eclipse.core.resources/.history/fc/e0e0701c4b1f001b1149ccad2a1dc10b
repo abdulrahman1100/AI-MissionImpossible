@@ -1,0 +1,11 @@
+
+abstract public class generic_search {
+	
+	abstract void BFS();
+
+	void BFS(node initialNode) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

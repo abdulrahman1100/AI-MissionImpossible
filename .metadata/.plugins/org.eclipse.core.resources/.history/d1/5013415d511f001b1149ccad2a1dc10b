@@ -1,0 +1,47 @@
+
+public class node {
+	
+	IMF_member x;
+	int depth;
+	int cost;
+	boolean goal;
+	
+	public node() {
+		
+	}
+	
+	public IMF_member getX() {
+		return x;
+	}
+	public void setX(IMF_member x) {
+		this.x = x;
+	}
+	public int getDepth() {
+		return depth;
+	}
+	public void setDepth(int depth) {
+		this.depth = depth;
+	}
+	public int getCost() {
+		return cost;
+	}
+	public void setCost(int cost) {
+		this.cost = cost;
+	}
+	public boolean isGoal() {
+		return goal;
+	}
+	public void setGoal(boolean goal) {
+		this.goal = goal;
+	}
+	public String getTransition() {
+		return transition;
+	}
+	public void setTransition(String transition) {
+		this.transition = transition;
+	}
+	String transition;
+	
+	
+
+}
