@@ -1,0 +1,44 @@
+package mision;
+
+import mision.dataStructure.Point;
+
+public class search_Tree {
+
+	node root;
+
+	private node addRecursive(node current, Point location) {
+
+		if (current == null)
+			return new node(current.x, location, 0, 0, false, 0, null);
+
+		if (current.location.x < location.x) {
+			// left
+			current.left = addRecursive(current.left, (location.setPoint((location.x--), location.y)));
+
+		} else if (current.location.x > location.x) {
+			// right
+			current.right = addRecursive(current.right, (location.setPoint((location.x++), location.y)));
+
+		} else if (current.location.y > location.y) {
+			// down
+			current.down = addRecursive(current.down, (location.setPoint((location.x), location.y++)));
+
+		} else if (current.location.y > location.y) {
+			// up
+			current.up = addRecursive(current.up, (location.setPoint((location.x), location.y--)));
+
+		}
+//		else {
+//			//carry no change in location but c is less  
+//		}
+		// i see that we do not need it here we just visualize to move in the tree
+
+		return current;
+
+	}
+
+	public void add(node n) {
+		root = addRecursive(root, n.location);
+	}
+
+}

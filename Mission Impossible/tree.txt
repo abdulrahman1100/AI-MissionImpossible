@@ -1,0 +1,14 @@
+Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  
+Empty  F(62)  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  
+Empty  Empty  Empty  F(53)  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  
+Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  
+Empty  Empty  Empty  S(0)   Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  
+Empty  F(81)  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  
+Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  
+Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  F(6)   Empty  
+Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  E(99)  F(80)  Empty  Empty  Empty  Empty  
+Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  
+Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  
+Empty  Empty  Empty  Empty  F(24)  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  
+Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  
+F(78)  Empty  Empty  Empty  Empty  Empty  F(88)  Empty  Empty  Empty  Empty  Empty  Empty  Empty  
