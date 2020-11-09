@@ -25,7 +25,9 @@ public class search_Tree {
 //		}
 		
 		String s = "";
-
+//		if(location==null) {
+//			return null;
+//		}
 
 		int x=location.x;
 		int y=location.y;
