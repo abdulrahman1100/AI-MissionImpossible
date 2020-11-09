@@ -1,0 +1,31 @@
+
+public class search_Tree {
+	
+	node root;
+
+	
+	private node addRecursive(node current) {
+		
+		if(current==null)
+			return new	node();
+		
+		switch(current.transition) {
+		case "right":current.right=addRecursive(current.right);
+			break;
+		case "left":current.left=addRecursive(current.left);
+		break;
+		case "up":current.up=addRecursive(current.up);
+		break;
+		case "down":current.down=addRecursive(current.down);
+		break;
+		case "carry":current.carry=addRecursive(current.carry);
+		break;
+		case "drop":current.drop=addRecursive(current.drop);
+		break;
+		}
+
+		return current;
+		
+	}
+
+}

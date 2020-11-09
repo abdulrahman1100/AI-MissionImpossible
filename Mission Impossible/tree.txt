@@ -1,0 +1,10 @@
+Empty  Empty  Empty  S(0)   Empty  Empty  Empty  Empty  
+Empty  Empty  Empty  Empty  Empty  Empty  Empty  F(2)   
+Empty  Empty  F(53)  Empty  Empty  Empty  Empty  Empty  
+Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  
+Empty  E(99)  Empty  Empty  Empty  F(68)  Empty  Empty  
+Empty  Empty  Empty  Empty  Empty  Empty  F(28)  Empty  
+F(62)  Empty  Empty  Empty  Empty  Empty  Empty  Empty  
+Empty  Empty  Empty  F(97)  Empty  Empty  F(65)  Empty  
+Empty  Empty  Empty  Empty  Empty  Empty  Empty  Empty  
+Empty  F(94)  Empty  Empty  Empty  F(30)  Empty  Empty  

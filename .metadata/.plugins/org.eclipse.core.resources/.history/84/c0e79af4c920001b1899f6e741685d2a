@@ -1,0 +1,135 @@
+import java.io.PrintStream;
+import java.util.LinkedList;
+
+public class search_Tree {
+
+	node root;
+	int mx;
+	int ny;
+	
+	
+	public search_Tree(int mx, int ny) {
+
+
+		this.mx = mx;
+		this.ny = ny;
+		System.out.println(mx+" "+ ny);
+	}
+
+	private node addRecursive(node current, Point location, IMF_member a) {
+		String s = "";
+//		if (location == null) {
+//
+//			return null;
+//		}
+//		Point right =transition("right",(location.setPoint((location.x++), location.y  )));
+//		Point left  =transition("left",(location.setPoint((location.x--), location.y  )));
+//		Point up    =transition("up",(location.setPoint((location.y--), location.y--)));
+//		Point down  =transition("up",(location.setPoint((location.y++), location.y++)));
+		
+//		if(right!=null) {
+//			
+//			current.right = addRecursive(current.right, right, current.x);
+//		}
+//		if(left!=null) {
+//			current.left  = addRecursive(current.left , left, current.x);
+//		}
+//		if(up!=null) {
+//			current.up    = addRecursive(current.up   , up, current.x);
+//		}
+//		if(down!=null) {
+//			current.down  = addRecursive(current.down , down, current.x);
+//		}
+			
+		
+		
+		
+		
+		if (current == null) { 
+			
+			return new node(a, location, 0, 0, false, 0, null);
+
+		}
+
+		if (current.location.x < location.x) {
+			// left
+			s="left";
+			current.transition=s;
+//			current.left = addRecursive(current.left, (location.setPoint((location.x--), location.y)),current.x);
+			addRecursive(current.left, (location.setPoint((location.x--), location.y)),current.x);
+
+		}if (current.location.x > location.x) {
+			// right
+			s="right";
+			current.transition=s;
+//			current.right = addRecursive(current.right, (location.setPoint((location.x++), location.y)),current.x);
+			addRecursive(current.right, (location.setPoint((location.x++), location.y)),current.x);
+
+		}if (current.location.y > location.y) {
+			// down
+			s="down";
+			current.transition=s;
+//			current.down = addRecursive(current.down, (location.setPoint((location.y++), location.y++)),current.x);
+			addRecursive(current.down, (location.setPoint((location.y++), location.y++)),current.x);
+
+		}if (current.location.y > location.y) {
+			// up
+			s="up";
+			current.transition=s;
+//			current.up = addRecursive(current.up, (location.setPoint((location.y--), location.y--)),current.x);
+			addRecursive(current.up, (location.setPoint((location.y--), location.y--)),current.x);
+
+		}
+
+//		else {
+//			//carry no change in location but c is less  
+//		}
+		// i see that we do not need it here we just visualize to move in the tree
+
+		return current;
+
+	}
+	
+	Point transition(String t, Point p) {
+		if (t.equals("right") && (p.x) + 1 < mx) {
+			return p.setPoint((p.x + 1), p.y);
+		}
+		if (t.equals("left") && (p.x) - 1 > 0) {
+			return p.setPoint((p.x - 1), p.y);
+		}
+		if (t.equals("up") && (p.y) - 1 > 0) {
+			return p.setPoint(p.x, (p.y - 1));
+		}
+
+		if (t.equals("down") && (p.y) + 1 < ny) {
+			return p.setPoint(p.x, (p.y + 1));
+		}
+		return null;
+
+	}
+
+	public void add(node n, Point location, IMF_member a) {
+		root = addRecursive(root, location, a);
+
+	}
+
+	void treeTraverse(StringBuilder sb, node n) {
+		if (n != null) {
+			sb.append(n.printNode());
+			sb.append("\n");
+			treeTraverse(sb, n.right);
+			treeTraverse(sb, n.left);
+			treeTraverse(sb, n.up);
+			treeTraverse(sb, n.down);
+
+		}
+
+	}
+
+	public void print(PrintStream os, node n) {
+		StringBuilder sb = new StringBuilder();
+		treeTraverse(sb, n);
+		os.print(sb.toString());
+	}
+
+}
